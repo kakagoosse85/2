@@ -1,0 +1,178 @@
+body {
+	margin: 5px;
+  	overflow-x: hidden;
+}
+
+details {
+	padding:5px;
+}
+
+span {
+	color: #d9cc00;
+}
+
+.cabecera {
+	display: grid;
+	padding: 5px;
+	grid-gap: 5px;
+	grid-template-columns: 1fr;
+    background-color: #424242;
+	color: #444;
+  }
+
+  .tit {
+	background-color: #212121;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 100%;
+	text-align: left;
+  }
+
+  .texto {
+	background-color: #212121;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 100%;
+  }
+
+
+.enlaces {
+	display: grid;
+	padding: 5px;
+	grid-gap: 5px;
+	grid-template-columns: [col] 50px [col] 1fr;
+	grid-template-rows: auto;
+    background-color: #424242;
+	color: #444;
+  }
+
+  .box {
+	background-color: #212121;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 100%;
+  }
+
+  .ico {
+	grid-column: col 1;
+  }
+
+  .url {
+	grid-column: col 2;
+	padding-left: 5px;
+	display: flex;
+  	flex-wrap: wrap;
+	align-content: center;
+  }
+
+.link {
+	height: 0px;
+	color: #424242;
+	background-color: #424242;
+
+}  
+
+
+  #toast {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    /*margin-left: -125px;*/
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+
+    position: fixed;
+    z-index: 1;
+    left: 0;right:0;
+    top: 30px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+#toast #img{
+	width: 70px;
+	height: 50px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+    float: left;
+    
+    box-sizing: border-box;
+
+    
+    background-color: #111;
+	color: #fff;
+	
+	content:url(icons/semaforo.png)
+}
+#toast #desc{
+
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+    color: yellow;
+   
+    padding: 16px;
+    
+    overflow: hidden;
+	white-space: nowrap;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {top: 30px; opacity: 0;} 
+    to {top:60px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 30px; opacity: 0;}
+    to {top:60px; opacity: 1;}
+}
+
+@-webkit-keyframes expand {
+    from {min-width: 50px} 
+    to {min-width: 250px}
+}
+
+@keyframes expand {
+    from {min-width: 50px}
+    to {min-width: 250px}
+}
+@-webkit-keyframes stay {
+    from {min-width: 250px} 
+    to {min-width: 250px}
+}
+
+@keyframes stay {
+    from {min-width: 250px}
+    to {min-width: 250px}
+}
+@-webkit-keyframes shrink {
+    from {min-width: 250px;} 
+    to {min-width: 50px;}
+}
+
+@keyframes shrink {
+    from {min-width: 300px;} 
+    to {min-width: 50px;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top:60px; opacity: 1;} 
+    to {top: 90px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top:60px; opacity: 1;}
+    to {top: 90px; opacity: 0;}
+}
+
+
+
